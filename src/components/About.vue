@@ -1,12 +1,6 @@
 <template>
   <div>
-    <svg class="hamburger" viewBox="0 0 22 15" role="img" v-on:click="openMenu()">
-      <path d="M0 0h22v3H0zM0 6h22v3H0zM0 12h22v3H0z"></path>
-    </svg>
-    <div class="nav" v-bind:class='{expanded: hasExpanded}' >
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-    </div>
+    <h1>About</h1>
     <router-view/>
   </div>
 </template>
@@ -15,8 +9,7 @@
 export default {
   data() {
     return {
-      text: 'hoge',
-      hasExpanded: false
+      text: 'hoge'
     }
   },
   
@@ -35,10 +28,6 @@ export default {
   border-radius 3px
   color: white
   padding 3px
-
-.hamburger 
-  width: 1.375rem;
-  height: .9375rem;
 
 .nav 
   background-color: rgba(0,0,0,.7)
